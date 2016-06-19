@@ -1,3 +1,10 @@
+# gen alg animation frames
+gen*.png
+
+# PyCharm project
+.idea/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
