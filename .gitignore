@@ -1,5 +1,6 @@
 # gen alg animation frames
 gen*.png
+evo.py
 
 # PyCharm project
 .idea/
