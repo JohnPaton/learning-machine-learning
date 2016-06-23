@@ -1,6 +1,5 @@
 import numpy as np
 import random
-import matplotlib.pyplot as plt
 
 # simulate N data points using polynomial coefficients coefs with domain lsit xrange
 # coefs[i] is coefficient of x**i
@@ -32,7 +31,7 @@ def simPoly(coefs, N, xrange=[-1,1], xrand = True, noise=0.1):
 # centroids is list of coords of centroids (these also set the dimension)
 # spreads is list of sd. dev. of clusters (single int to make them all the same)
 # labels is list of labels of points from different centroids (default '0','1',...)
-# returns lists of coords [xs, ys, ... , labels]
+# returns lists of data points [[x1, y1, ... , label1],...,[...]]
 def simClust(centroids, N, spreads = 1, labels = []):
     ncent= len(centroids)
     dim = len(centroids[0])
@@ -48,26 +47,15 @@ def simClust(centroids, N, spreads = 1, labels = []):
         sp = spreads
 
     # simulate data
-    data = [[] for _ in range(dim+1)]
+    data = []
     for p in range(N):
+        point = []
         cent = random.randint(0,ncent-1)
         for i in range(dim):
-            x = random.gauss(centroids[cent][i], sp[cent])
-            data[i].append(x)
+            point.append(random.gauss(centroids[cent][i], sp[cent]))
 
-        data[i+1].append(labels[cent])
+        point.append(labels[cent])
+        data.append(point)
 
     return data
             
-
-data = simClust([[0,0],[5,5],[1,8]],1000, spreads = [1,2,1],labels=['r','k','b'])
-xs = data[0]
-ys = data[1]
-
-plt.scatter(xs,ys,c=data[2])
-plt.show()
-
-    
-
-    
-    
