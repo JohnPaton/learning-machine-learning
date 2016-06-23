@@ -1,0 +1,11 @@
+Sentdex's Intro to ML tutorials
+https://pythonprogramming.net/machine-learning-tutorial-python-introduction/
+
+Andrew Ng's Coursera course
+https://www.coursera.org/learn/machine-learning
+
+Hinton's Neural Network Coursera course
+https://www.coursera.org/course/neuralnets
+
+UCI Sample Datasets
+https://archive.ics.uci.edu/ml/datasets.html
