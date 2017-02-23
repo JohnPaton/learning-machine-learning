@@ -2,6 +2,9 @@
 gen*.png
 evo.py
 
+# matlab data files
+.mat
+
 # PyCharm project
 .idea/
 
