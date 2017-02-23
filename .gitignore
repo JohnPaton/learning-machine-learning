@@ -2,8 +2,8 @@
 gen*.png
 evo.py
 
-# matlab data files
-.mat
+# coursera files
+token.mat
 
 # PyCharm project
 .idea/
